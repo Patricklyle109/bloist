@@ -1,48 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b22701d7-f4b6-4cd9-80c9-4b637f42fd4f" name="Changes" comment="Remove space after CNAME">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/CNAME" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/reveal.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/reveal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
+    <list default="true" id="b22701d7-f4b6-4cd9-80c9-4b637f42fd4f" name="Changes" comment="Change to www.bloist.com">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/financing.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/financing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/grid.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/grid.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/help-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/help-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/how-it-works.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/how-it-works.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/incentives.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/incentives.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/monitoring.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/monitoring.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/outage-calculator.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/outage-calculator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/reports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/resilience.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/resilience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/roi.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/roi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/faq-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/faq-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/financing-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/financing-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/gallery-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/gallery-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/grid-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/grid-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/help-us-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/help-us-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/how-it-works-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/how-it-works-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/incentives-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/incentives-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/monitoring-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/monitoring-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/reports-air-quality.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/reports-air-quality.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/reports-energy.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/reports-energy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/reports-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/reports-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/resilience-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/resilience-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/roi-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/roi-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/tech-inverters-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/tech-inverters-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/tech-panels-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/tech-panels-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/tech-shading-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/tech-shading-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/why-solar-sources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/why-solar-sources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tech-inverters.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tech-inverters.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tech-panels.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tech-panels.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tech-shading.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tech-shading.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/why-solar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/why-solar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +61,7 @@
       <updated>1767521681501</updated>
       <workItem from="1767521682798" duration="8543000" />
       <workItem from="1767541578507" duration="180000" />
-      <workItem from="1767541776708" duration="3603000" />
+      <workItem from="1767541776708" duration="4040000" />
     </task>
     <task id="LOCAL-00001" summary="First Push">
       <option name="closed" value="true" />
@@ -127,7 +87,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767544158852</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Change to www.bloist.com">
+      <option name="closed" value="true" />
+      <created>1767561902999</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1767561902999</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +143,7 @@
     <MESSAGE value="First Push" />
     <MESSAGE value="Added CNAME" />
     <MESSAGE value="Remove space after CNAME" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove space after CNAME" />
+    <MESSAGE value="Change to www.bloist.com" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change to www.bloist.com" />
   </component>
 </project>
