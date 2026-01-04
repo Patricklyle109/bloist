@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b22701d7-f4b6-4cd9-80c9-4b637f42fd4f" name="Changes" comment="First Push">
-      <change afterPath="$PROJECT_DIR$/CNAME " afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/reports/air_quality_united_states.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/reports/air_quality_united_states.png" afterDir="false" />
+    <list default="true" id="b22701d7-f4b6-4cd9-80c9-4b637f42fd4f" name="Changes" comment="Added CNAME">
+      <change beforePath="$PROJECT_DIR$/CNAME " beforeDir="false" afterPath="$PROJECT_DIR$/CNAME" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,7 @@
       <updated>1767521681501</updated>
       <workItem from="1767521682798" duration="8543000" />
       <workItem from="1767541578507" duration="180000" />
-      <workItem from="1767541776708" duration="1616000" />
+      <workItem from="1767541776708" duration="2009000" />
     </task>
     <task id="LOCAL-00001" summary="First Push">
       <option name="closed" value="true" />
@@ -73,7 +71,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767542041796</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added CNAME">
+      <option name="closed" value="true" />
+      <created>1767543765724</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1767543765724</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Push" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Push" />
+    <MESSAGE value="Added CNAME" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CNAME" />
   </component>
 </project>
