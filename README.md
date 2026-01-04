@@ -1,4 +1,4 @@
-# bloist.com (Static GitHub Pages Site)
+# www.bloist.com (Static GitHub Pages Site)
 
 This ZIP contains a **fully static** multi-page site (HTML/CSS/JS) designed to be hosted on **GitHub Pages**.
 
@@ -10,7 +10,7 @@ This ZIP contains a **fully static** multi-page site (HTML/CSS/JS) designed to b
 
 ## Deploy to GitHub Pages
 
-1. Create a new repo (e.g., `bloist.com`).
+1. Create a new repo (e.g., `www.bloist.com`).
 2. Upload the contents of this ZIP to the repo root.
 3. In GitHub: **Settings → Pages**
    - Source: `Deploy from a branch`

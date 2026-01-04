@@ -3,7 +3,7 @@
    IMPORTANT: Keep this file dependency-free so the site remains fully static.
 */
 
-/* Bloist.com — small, dependency-free interactivity for GitHub Pages */
+/* www.bloist.com — small, dependency-free interactivity for GitHub Pages */
 
 const $ = (sel, root=document) => root.querySelector(sel);
 const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
