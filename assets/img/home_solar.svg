@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#eaf6ff"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b4a6b" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#2aa7d6" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#sky)"/>
+  <circle cx="1000" cy="130" r="60" fill="#ffd65a"/>
+  <path d="M0 520 C200 470 420 510 600 480 C760 452 940 430 1200 470 L1200 700 L0 700 Z" fill="#dff3e7"/>
+  <path d="M0 560 C240 520 420 560 630 540 C820 520 980 520 1200 550 L1200 700 L0 700 Z" fill="#c8ead9"/>
+  <!-- house -->
+  <rect x="360" y="300" width="480" height="260" rx="20" fill="#ffffff" stroke="#d6dee6" stroke-width="6"/>
+  <rect x="405" y="350" width="180" height="140" rx="12" fill="#f7fbff" stroke="#d6dee6" stroke-width="5"/>
+  <rect x="615" y="350" width="180" height="140" rx="12" fill="#f7fbff" stroke="#d6dee6" stroke-width="5"/>
+  <rect x="555" y="410" width="90" height="150" rx="12" fill="#ffffff" stroke="#d6dee6" stroke-width="6"/>
+  <circle cx="625" cy="485" r="6" fill="#8aa2b5"/>
+  <!-- roof -->
+  <path d="M330 330 L600 165 L870 330 Z" fill="#f3f7fb" stroke="#d6dee6" stroke-width="6"/>
+  <!-- solar panels -->
+  <g transform="translate(450 210) skewX(-18)">
+    <rect x="0" y="0" width="360" height="140" rx="12" fill="#08344d" opacity="0.98"/>
+    <g stroke="#2aa7d6" stroke-opacity="0.55" stroke-width="4">
+      <line x1="30" y1="10" x2="30" y2="130"/>
+      <line x1="90" y1="10" x2="90" y2="130"/>
+      <line x1="150" y1="10" x2="150" y2="130"/>
+      <line x1="210" y1="10" x2="210" y2="130"/>
+      <line x1="270" y1="10" x2="270" y2="130"/>
+      <line x1="330" y1="10" x2="330" y2="130"/>
+      <line x1="10" y1="40" x2="350" y2="40"/>
+      <line x1="10" y1="80" x2="350" y2="80"/>
+      <line x1="10" y1="120" x2="350" y2="120"/>
+    </g>
+    <rect x="0" y="0" width="360" height="140" rx="12" fill="url(#glass)" opacity="0.35"/>
+  </g>
+  <!-- trees -->
+  <g opacity="0.95">
+    <circle cx="240" cy="430" r="55" fill="#6ad39b"/>
+    <circle cx="200" cy="450" r="40" fill="#5bc88e"/>
+    <rect x="225" y="470" width="24" height="95" rx="10" fill="#8b6a54"/>
+    <circle cx="970" cy="430" r="55" fill="#6ad39b"/>
+    <circle cx="1010" cy="450" r="40" fill="#5bc88e"/>
+    <rect x="965" y="470" width="24" height="95" rx="10" fill="#8b6a54"/>
+  </g>
+  <text x="60" y="650" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="24" fill="#4b6578">Clean home energy • Solar on the roof • Quiet, local power</text>
+</svg>

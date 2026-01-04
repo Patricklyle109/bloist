@@ -1,0 +1,382 @@
+<!-- BLOIST-ANNOTATED-FILE: reports.html
+  PURPOSE: Static page for bloist.com (no build step required).
+  NOTE: This file is intentionally plain HTML so it can be hosted anywhere.
+
+  HOW THIS PAGE WORKS (important):
+  - There are two main sections:
+      1) #air   : Bar charts by region (static PNG images)
+      2) #energy: Line charts by country (static PNG images)
+  - Charts are images:
+      assets/img/reports/*.png
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <!-- Basic HTML metadata -->
+  <meta charset="utf-8"/>
+
+  <!-- Responsive layout: required for mobile-friendly sizing -->
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <!-- Theme color used by mobile browsers (tab / address bar tint) -->
+  <meta content="#061021" name="theme-color"/>
+
+  <!-- SEO snippet -->
+  <meta content="bloist.com — clean, technical, and compelling solar education for homeowners." name="description"/>
+
+  <title>Reports • bloist.com</title>
+
+  <!-- Site styling (if these paths break, page can look unstyled or unreadable) -->
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/css/reveal.css" rel="stylesheet"/>
+
+  <!-- Favicon -->
+  <link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+
+<body>
+<!-- Anchor target for “Return to top” behavior (typically driven by main.js) -->
+<div id="top"></div>
+
+<header>
+  <!-- Accessibility: allows keyboard/screenreader users to skip nav -->
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <div class="container navbar">
+    <!-- Brand link back to homepage -->
+    <a aria-label="Bloist home" class="brand" href="../index.html">
+      <div aria-hidden="true" class="logo"></div>
+      <span>bloist.com</span>
+    </a>
+
+    <div class="nav-grow"></div>
+
+    <!-- Mobile nav toggle (must match #navLinks) -->
+    <!-- If dropdown/menu is broken, the JS that controls this is assets/js/main.js -->
+    <button aria-controls="navLinks" aria-expanded="false" class="nav-toggle" id="navToggle">Menu ▾</button>
+
+    <!-- Primary site navigation -->
+    <nav aria-label="Primary" class="nav-links" id="navLinks">
+      <ul>
+
+        <!-- WHY SOLAR dropdown -->
+        <li class="has-dropdown">
+          <a href="../pages/why-solar.html">Why Solar <span class="caret">▾</span></a>
+          <div class="dropdown" role="menu">
+            <a href="../pages/why-solar.html"><span class="icon green">☀️</span>
+              <span><b>Cleaner air</b><small>Cut emissions by reducing fossil generation demand.</small></span>
+            </a>
+            <a href="../pages/roi.html"><span class="icon">📉</span>
+              <span><b>Lower long-term cost</b><small>Model payback, savings, and uncertainty.</small></span>
+            </a>
+
+            <!-- Resilience submenu -->
+            <div class="has-dropdown">
+              <a href="../pages/resilience.html"><span class="icon">🔋</span>
+                <span><b>Resilience</b><small>Solar + storage keeps critical loads on.</small></span>
+              </a>
+
+              <div class="dropdown submenu">
+                <a href="../pages/resilience.html#outages"><span class="icon green">⚡</span>
+                  <span><b>Outage playbooks</b><small>Refrigerator, medical devices, network, HVAC.</small></span>
+                </a>
+                <a href="../pages/resilience.html#storage"><span class="icon">🧠</span>
+                  <span><b>Battery sizing</b><small>kilowatt-hour, kilowatt, and inverter constraints explained.</small></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- TECHNOLOGY dropdown -->
+        <li class="has-dropdown">
+          <a href="../pages/how-it-works.html">Technology <span class="caret">▾</span></a>
+          <div class="dropdown" role="menu">
+
+            <!-- Photovoltaic basics submenu -->
+            <div class="has-dropdown">
+              <a href="../pages/how-it-works.html#pv"><span class="icon">🧩</span>
+                <span><b>photovoltaic basics</b><small>Cells, modules, strings, and DC→AC.</small></span>
+              </a>
+
+              <div class="dropdown submenu">
+                <a href="../pages/tech-panels.html"><span class="icon">🧱</span>
+                  <span><b>Panels</b><small>Efficiency, temperature coeff., degradation.</small></span>
+                </a>
+                <a href="../pages/tech-inverters.html"><span class="icon">🔌</span>
+                  <span><b>Inverters</b><small>String vs microinverters vs optimizers.</small></span>
+                </a>
+                <a href="../pages/tech-shading.html"><span class="icon">🌳</span>
+                  <span><b>Shading</b><small>Why a single shadow can matter—by topology.</small></span>
+                </a>
+              </div>
+            </div>
+
+            <a href="../pages/grid.html"><span class="icon green">🗺️</span>
+              <span><b>Grid interaction</b><small>Net metering, time-of-use, interconnection, export limits.</small></span>
+            </a>
+            <a href="../pages/monitoring.html"><span class="icon">📡</span>
+              <span><b>Monitoring</b><small>Telemetry, performance ratios, alerts.</small></span>
+            </a>
+          </div>
+        </li>
+
+        <!-- COST & INCENTIVES dropdown -->
+        <li class="has-dropdown">
+          <a href="../pages/incentives.html">Cost &amp; Incentives <span class="caret">▾</span></a>
+          <div class="dropdown" role="menu">
+            <a href="../pages/incentives.html"><span class="icon green">🏷️</span>
+              <span><b>Federal &amp; state</b><small>Credits, rebates, and utility programs.</small></span>
+            </a>
+            <a href="../pages/roi.html"><span class="icon">🧮</span>
+              <span><b>return on investment calculator</b><small>Estimate size, price, and payback.</small></span>
+            </a>
+            <a href="../pages/financing.html"><span class="icon">🏦</span>
+              <span><b>Financing</b><small>Cash, loan, power purchase agreement, and what to compare.</small></span>
+            </a>
+          </div>
+        </li>
+
+        <!-- REPORTS dropdown -->
+        <li class="has-dropdown">
+          <a href="../pages/reports.html">Reports <span class="caret">▾</span></a>
+          <div class="dropdown" role="menu">
+            <!-- IMPORTANT: these links jump to sections below and require matching id="air" and id="energy" -->
+            <a href="../pages/reports.html#air"><span class="icon red">🌫️</span>
+              <span><b>Air quality</b><small>fine particulate matter smaller than 2.5 micrometers and nitrogen dioxide snapshots across major cities.</small></span>
+            </a>
+            <a href="../pages/reports.html#energy"><span class="icon">🏭</span>
+              <span><b>Energy mix</b><small>Fossil fuels and solar power trends.</small></span>
+            </a>
+          </div>
+        </li>
+
+        <li><a href="../pages/gallery.html">Gallery</a></li>
+        <li><a href="../pages/faq.html">frequently asked questions</a></li>
+
+        <!-- Sources index for the whole site -->
+        <li>
+          <a href="sources/index.html"><span class="icon">📚</span><span><b>Sources</b><small>Data and references</small></span></a>
+        </li>
+
+      </ul>
+
+      <!-- Call-to-action buttons in the nav -->
+      <div class="nav-cta">
+        <a class="pill help" href="../pages/help-us.html">Help us continue to breathe</a>
+
+        <!-- Mailto: link opens visitor's email client -->
+        <a class="pill accent" href="mailto:patrick.proctor@yahoo.com?subject=Bloist.com%20-%20Solar%20for%20my%20home&amp;body=Hi%20Patrick%2C%0D%0A%0D%0AI%20want%20to%20learn%20more%20about%20going%20solar.%20Here%E2%80%99s%20my%20ZIP%20code%20and%20average%20monthly%20bill%3A%0D%0A%0D%0AZIP%3A%20%0D%0ABill%3A%20%0D%0A%0D%0AThank%20you!">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN CONTENT (everything inside here is what Skip-to-content targets) -->
+<main id="content">
+
+  <!-- HERO: intro text + quick section jump buttons -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <!-- Badge is a short category label. Keep it short and readable. -->
+        <div class="badge">REPORTS • CHARTS • AIR QUALITY</div>
+
+        <h1>Reports: pollution &amp; energy mix</h1>
+
+        <!-- Page-level summary sentence -->
+        <p class="lede">Charts that connect electricity demand to air quality outcomes. Data here comes from public datasets and is frozen into this static site with clear sources and dates.</p>
+
+        <!-- In-page navigation buttons (anchors) -->
+        <div style="display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn green" href="#air">Air quality</a>
+          <a class="btn" href="#energy">Energy mix</a>
+        </div>
+      </div>
+
+      <!-- Right-hand hero image card -->
+      <div class="card reveal">
+        <img alt="Smog city illustration." src="../assets/img/smog_city.svg"/>
+        <div class="card-body">
+          <b>Smog drives behavior</b>
+          <p class="small" style="margin:8px 0 0; color:var(--muted)">When air is visibly bad, the idea of cleaner generation becomes personal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AIR QUALITY SECTION -->
+  <section class="section" id="air">
+    <!--
+      REORDERING RULE (requested):
+      - United States must appear first.
+      - Remaining regions ordered by HIGHEST to LOWEST output using the ENERGY charts as the ranking source.
+
+      ENERGY-BASED RANKING (by fossil electricity level, largest → smallest):
+      1) China
+      2) United States
+      3) Europe
+      4) India
+      5) Mexico
+
+      APPLYING RULE WITH "US FIRST":
+      1) United States (forced to top)
+      2) China
+      3) Europe
+      4) India
+      5) Mexico
+    -->
+
+    <div class="container">
+      <h2>Air quality snapshots (major cities)</h2>
+
+      <p>
+        These charts use the <b>World Health Organization Ambient Air Quality Database</b> (version 6.1, released 31 January 2024).
+        Each chart shows the <b>latest available city averages</b> for:
+        <b>fine particle pollution smaller than 2.5 micrometers</b> and <b>nitrogen dioxide</b>.
+        Data snapshot date in this repository: <b>2026-01-04</b>.
+      </p>
+
+      <!-- STACKED DISPLAY (requested): charts should be larger, not side-by-side.
+           We keep "card reveal" styling, but present them one-per-row (full width). -->
+
+      <!-- 1) UNITED STATES (forced top) -->
+      <div class="card reveal" style="padding:16px; margin-top:14px">
+        <img alt="United States air quality chart (major cities)." src="../assets/img/reports/air_quality_united_states.png" style="width:100%; height:auto"/>
+        <p class="note">United States: New York, Los Angeles, Chicago, Houston, Phoenix.</p>
+      </div>
+
+      <!-- 2) CHINA -->
+      <div class="card reveal" style="padding:16px; margin-top:14px">
+        <img alt="China air quality chart (major cities)." src="../assets/img/reports/air_quality_china.png" style="width:100%; height:auto"/>
+        <p class="note">China: Beijing, Shanghai, Guangzhou, Shenzhen, Chengdu.</p>
+      </div>
+
+      <!-- 3) EUROPE -->
+      <div class="card reveal" style="padding:16px; margin-top:14px">
+        <img alt="Europe air quality chart (major cities)." src="../assets/img/reports/air_quality_europe.png" style="width:100%; height:auto"/>
+        <p class="note">Europe: London, Paris, Berlin, Madrid, Rome.</p>
+      </div>
+
+      <!-- 4) INDIA -->
+      <div class="card reveal" style="padding:16px; margin-top:14px">
+        <img alt="India air quality chart (major cities)." src="../assets/img/reports/air_quality_india.png" style="width:100%; height:auto"/>
+        <p class="note">India: Delhi, Mumbai, Bengaluru, Kolkata, Chennai.</p>
+      </div>
+
+      <!-- 5) MEXICO -->
+      <div class="card reveal" style="padding:16px; margin-top:14px">
+        <img alt="Mexico air quality chart (major cities)." src="../assets/img/reports/air_quality_mexico.png" style="width:100%; height:auto"/>
+        <p class="note">Mexico: Mexico City, Guadalajara, Monterrey, Puebla, Tijuana.</p>
+      </div>
+
+      <p class="note" style="margin-top:10px">
+        Units: micrograms per cubic meter (µg/m³). All five charts use the same vertical scale so you can compare regions directly. The year printed above each city is the latest year available for that city in the database.
+        City naming varies by country; values represent city-level averages, not a single monitor.
+      </p>
+    </div>
+
+    <div class="section-sources">
+      <a class="btn btn-small" href="sources/reports-air-quality.html">Sources for this section</a>
+    </div>
+  </section>
+
+  <!-- ENERGY SECTION -->
+  <section class="section" id="energy">
+    <!--
+      DISPLAY RULE (requested):
+      - These charts must be STACKED (one per row), not side-by-side, because they were too small.
+      - Order should match the same rule as above:
+          1) United States first
+          2) Remaining countries from highest to lowest output
+    -->
+    <div class="container">
+      <h2>Energy mix: electricity from fossil fuels and solar power</h2>
+
+      <p>
+        These charts come from the <b>Our World in Data Energy dataset</b>. Each chart shows two lines:
+        <b>electricity from fossil fuels</b> and <b>electricity from solar power</b>, measured in <b>terawatt-hours</b>.
+        <b>All five charts use the same vertical scale</b> so you can compare countries directly.
+        Data snapshot date in this repository: <b>2026-01-04</b>.
+      </p>
+
+      <!-- 1) UNITED STATES (forced top) -->
+      <div class="card reveal" style="padding:16px; margin-top:14px">
+        <img alt="United States energy chart: fossil fuels and solar power (terawatt-hours)." src="../assets/img/reports/us_energy_index.png" style="width:100%; height:auto"/>
+        <p class="note">United States (1990–2024).</p>
+      </div>
+
+      <!-- 2) CHINA (highest output among remaining) -->
+      <div class="card reveal" style="padding:16px; margin-top:14px">
+        <img alt="China energy chart: fossil fuels and solar power (terawatt-hours)." src="../assets/img/reports/china_energy_index.png" style="width:100%; height:auto"/>
+        <p class="note">China (1990–2024).</p>
+      </div>
+
+      <!-- 3) EUROPE -->
+      <div class="card reveal" style="padding:16px; margin-top:14px">
+        <img alt="Europe energy chart: fossil fuels and solar power (terawatt-hours)." src="../assets/img/reports/europe_energy_index.png" style="width:100%; height:auto"/>
+        <p class="note">Europe (1990–2024).</p>
+      </div>
+
+      <!-- 4) INDIA -->
+      <div class="card reveal" style="padding:16px; margin-top:14px">
+        <img alt="India energy chart: fossil fuels and solar power (terawatt-hours)." src="../assets/img/reports/india_energy_index.png" style="width:100%; height:auto"/>
+        <p class="note">India (1990–2024).</p>
+      </div>
+
+      <!-- 5) MEXICO (lowest output among the set) -->
+      <div class="card reveal" style="padding:16px; margin-top:14px">
+        <img alt="Mexico energy chart: fossil fuels and solar power (terawatt-hours)." src="../assets/img/reports/mexico_energy_index.png" style="width:100%; height:auto"/>
+        <p class="note">Mexico (1990–2024).</p>
+      </div>
+    </div>
+
+    <div class="section-sources">
+      <a class="btn btn-small" href="sources/reports-energy.html">Sources for this section</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand" style="gap:12px; margin-bottom:10px">
+        <div aria-hidden="true" class="logo"></div>
+        <span>bloist.com</span>
+      </div>
+
+      <p class="small">A technical, human-first pitch for residential solar.</p>
+
+      <p class="small">
+        Contact:
+        <a class="btn secondary" href="mailto:patrick.proctor@yahoo.com">patrick.proctor@yahoo.com</a>
+      </p>
+
+      <p class="note">© 2026 bloist.com • Content is educational and illustrative; verify incentives and utility rules for your location.</p>
+    </div>
+
+    <div class="muted-box">
+      <b>Quick links</b>
+      <hr class="sep"/>
+      <div style="display:grid; gap:10px">
+        <a class="btn secondary" href="../pages/roi.html">return on investment calculator</a>
+        <a class="btn secondary" href="../pages/reports.html">Reports &amp; charts</a>
+        <a class="btn secondary" href="../pages/how-it-works.html">How it works</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Site JavaScript:
+     - dropdown menu behavior
+     - reveal animations (if used)
+     - floating return-to-top button behavior (if present)
+-->
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

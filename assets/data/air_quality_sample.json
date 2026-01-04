@@ -1,0 +1,39 @@
+{
+  "cities": [
+    "Delhi",
+    "Beijing",
+    "Lahore",
+    "Dhaka",
+    "Cairo",
+    "Jakarta",
+    "Mexico City",
+    "Los Angeles",
+    "London",
+    "Sydney"
+  ],
+  "pm25_ug_m3": [
+    95,
+    55,
+    80,
+    70,
+    45,
+    38,
+    25,
+    18,
+    12,
+    7
+  ],
+  "no2_ppb": [
+    38,
+    30,
+    28,
+    22,
+    26,
+    19,
+    17,
+    14,
+    10,
+    7
+  ],
+  "note": "Illustrative sample values for demo charting. Replace with real datasets."
+}

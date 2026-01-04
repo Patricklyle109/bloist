@@ -1,0 +1,12 @@
+/* BLOIST-ANNOTATED-FILE: reveal.css
+   PURPOSE: Site-wide styling for bloist.com.
+   WHERE TO EDIT:
+     - Color theme variables live near the top (look for :root { --... }).
+     - Buttons and navigation styles are used across every page.
+   COMMON ISSUES + FIXES:
+     - Dropdowns closing too fast: see assets/js/main.js event handling (pointer + focus).
+     - Contrast problems: adjust --text / --muted / --card and re-test headings.
+*/
+
+.reveal{opacity:0; transform: translateY(10px); transition: opacity .55s ease, transform .55s ease;}
+.reveal.in{opacity:1; transform:none;}

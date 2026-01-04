@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="haze" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#1c2430"/>
+      <stop offset="1" stop-color="#2d3748"/>
+    </linearGradient>
+    <linearGradient id="smoke" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#cfd6df" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#cfd6df" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#haze)"/>
+  <circle cx="980" cy="120" r="50" fill="#8a93a2" opacity="0.5"/>
+  <rect y="520" width="1200" height="180" fill="#1a202c"/>
+  <!-- plant -->
+  <rect x="180" y="360" width="520" height="180" rx="18" fill="#2b313f" stroke="#4a5568" stroke-width="6"/>
+  <rect x="240" y="410" width="120" height="80" rx="10" fill="#1f2937" stroke="#4a5568" stroke-width="4"/>
+  <rect x="390" y="410" width="120" height="80" rx="10" fill="#1f2937" stroke="#4a5568" stroke-width="4"/>
+  <rect x="540" y="410" width="120" height="80" rx="10" fill="#1f2937" stroke="#4a5568" stroke-width="4"/>
+  <!-- stacks -->
+  <g>
+    <rect x="760" y="220" width="70" height="320" rx="18" fill="#2b313f" stroke="#4a5568" stroke-width="6"/>
+    <rect x="860" y="260" width="70" height="280" rx="18" fill="#2b313f" stroke="#4a5568" stroke-width="6"/>
+    <rect x="770" y="265" width="50" height="18" rx="9" fill="#e53e3e"/>
+    <rect x="870" y="305" width="50" height="18" rx="9" fill="#e53e3e"/>
+  </g>
+  <!-- smoke plumes -->
+  <g opacity="0.9">
+    <path d="M780 220 C740 200 750 160 800 150 C780 120 810 95 850 105 C880 70 930 80 940 120 C985 125 1000 165 970 195 C1000 230 970 270 930 268 C910 300 860 305 835 280 C810 305 760 295 760 260 C720 255 710 230 735 210 C740 200 755 195 780 220 Z" fill="url(#smoke)"/>
+    <path d="M885 260 C850 245 860 215 900 205 C880 185 905 165 935 175 C955 150 990 160 997 190 C1030 195 1040 225 1020 245 C1040 270 1020 300 990 300 C975 325 940 330 920 312 C900 330 860 320 860 295 C830 292 820 275 838 260 C845 252 860 250 885 260 Z" fill="url(#smoke)"/>
+  </g>
+  <text x="60" y="90" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="40" fill="#e2e8f0">Centralized, polluting generation</text>
+  <text x="60" y="135" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="24" fill="#a0aec0">Fossil plants emit CO₂, NOₓ, SO₂, and particulates—driving smog and health impacts.</text>
+</svg>

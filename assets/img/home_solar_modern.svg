@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="s" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f5fbff"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#s)"/>
+  <path d="M0 520 C260 460 480 520 720 470 C960 420 1040 430 1200 470 L1200 700 L0 700 Z" fill="#e6f7ef"/>
+  <circle cx="150" cy="150" r="55" fill="#ffe07d"/>
+  <!-- modern house -->
+  <rect x="260" y="300" width="680" height="260" rx="28" fill="#ffffff" stroke="#d6dee6" stroke-width="6"/>
+  <rect x="310" y="340" width="310" height="200" rx="18" fill="#f7fbff" stroke="#d6dee6" stroke-width="5"/>
+  <rect x="650" y="340" width="240" height="200" rx="18" fill="#f7fbff" stroke="#d6dee6" stroke-width="5"/>
+  <rect x="650" y="385" width="240" height="10" fill="#d6dee6"/>
+  <rect x="650" y="445" width="240" height="10" fill="#d6dee6"/>
+  <rect x="650" y="505" width="240" height="10" fill="#d6dee6"/>
+  <!-- roof + panels -->
+  <path d="M240 320 L460 190 L980 190 L980 320 Z" fill="#f3f7fb" stroke="#d6dee6" stroke-width="6"/>
+  <g transform="translate(500 205)">
+    <rect x="0" y="0" width="420" height="130" rx="14" fill="#0a3651"/>
+    <g stroke="#44b7e3" stroke-opacity="0.6" stroke-width="4">
+      <line x1="35" y1="12" x2="35" y2="118"/>
+      <line x1="105" y1="12" x2="105" y2="118"/>
+      <line x1="175" y1="12" x2="175" y2="118"/>
+      <line x1="245" y1="12" x2="245" y2="118"/>
+      <line x1="315" y1="12" x2="315" y2="118"/>
+      <line x1="385" y1="12" x2="385" y2="118"/>
+      <line x1="12" y1="44" x2="408" y2="44"/>
+      <line x1="12" y1="84" x2="408" y2="84"/>
+    </g>
+    <rect x="0" y="0" width="420" height="130" rx="14" fill="#2aa7d6" opacity="0.18"/>
+  </g>
+  <text x="60" y="650" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="24" fill="#4b6578">Modern solar • Grid-tied with storage-ready design</text>
+</svg>

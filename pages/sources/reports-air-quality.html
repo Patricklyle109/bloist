@@ -1,0 +1,190 @@
+<!-- BLOIST-ANNOTATED-FILE: reports-air-quality.html
+  PURPOSE: Static page for bloist.com (no server code; works on GitHub Pages and any static host).
+  WHERE TO EDIT:
+    - Content sections are inside <main id="content">…</main>
+    - Navigation menu is inside <header>…</header> (shared across pages; keep links consistent)
+    - Section-level source links appear near the end of each section as "Sources for this section"
+  COMMON ISSUES + FIXES:
+    - Broken images: verify relative paths (../assets/... vs ../../assets/...)
+    - Broken in-page links: verify the target section has a matching id="..."
+    - Hard-to-read charts: charts are PNG files in assets/img/reports/ generated from public datasets.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#061021" name="theme-color"/>
+  <meta content="Sources for Air quality on bloist.com" name="description"/>
+  <title>Sources • Air quality • bloist.com</title>
+  <link href="../../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../../assets/css/reveal.css" rel="stylesheet"/>
+  <link href="../../assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body><div id="top"></div>
+<header>
+<a class="skip-link" href="#content">Skip to content</a>
+<div class="container navbar">
+<a aria-label="Bloist home" class="brand" href="../index.html">
+<div aria-hidden="true" class="logo"></div>
+<span>bloist.com</span>
+</a>
+<div class="nav-grow"></div>
+<button aria-controls="navLinks" aria-expanded="false" class="nav-toggle" id="navToggle">Menu ▾</button>
+<nav aria-label="Primary" class="nav-links" id="navLinks">
+<ul>
+<li class="has-dropdown">
+<a href="../why-solar.html">Why Solar <span class="caret">▾</span></a>
+<div class="dropdown" role="menu">
+<a href="../why-solar.html"><span class="icon green">☀️</span>
+<span><b>Cleaner air</b><small>Cut emissions by reducing fossil generation demand.</small></span>
+</a>
+<a href="../roi.html"><span class="icon">📉</span>
+<span><b>Lower long-term cost</b><small>Model payback, savings, and uncertainty.</small></span>
+</a>
+<div class="has-dropdown">
+<a href="../resilience.html"><span class="icon">🔋</span>
+<span><b>Resilience</b><small>Solar + storage keeps critical loads on.</small></span>
+</a>
+<div class="dropdown submenu">
+<a href="../resilience.html#outages"><span class="icon green">⚡</span>
+<span><b>Outage playbooks</b><small>Refrigerator, medical devices, network, HVAC.</small></span>
+</a>
+<a href="../resilience.html#storage"><span class="icon">🧠</span>
+<span><b>Battery sizing</b><small>kilowatt-hour, kilowatt, and inverter constraints explained.</small></span>
+</a>
+</div>
+</div>
+</div>
+</li>
+<li class="has-dropdown">
+<a href="../how-it-works.html">Technology <span class="caret">▾</span></a>
+<div class="dropdown" role="menu">
+<div class="has-dropdown">
+<a href="../how-it-works.html#pv"><span class="icon">🧩</span>
+<span><b>photovoltaic basics</b><small>Cells, modules, strings, and DC→AC.</small></span>
+</a>
+<div class="dropdown submenu">
+<a href="../tech-panels.html"><span class="icon">🧱</span>
+<span><b>Panels</b><small>Efficiency, temperature coeff., degradation.</small></span>
+</a>
+<a href="../tech-inverters.html"><span class="icon">🔌</span>
+<span><b>Inverters</b><small>String vs microinverters vs optimizers.</small></span>
+</a>
+<a href="../tech-shading.html"><span class="icon">🌳</span>
+<span><b>Shading</b><small>Why a single shadow can matter—by topology.</small></span>
+</a>
+</div>
+</div>
+<a href="../grid.html"><span class="icon green">🗺️</span>
+<span><b>Grid interaction</b><small>Net metering, time-of-use, interconnection, export limits.</small></span>
+</a>
+<a href="../monitoring.html"><span class="icon">📡</span>
+<span><b>Monitoring</b><small>Telemetry, performance ratios, alerts.</small></span>
+</a>
+</div>
+</li>
+<li class="has-dropdown">
+<a href="../incentives.html">Cost &amp; Incentives <span class="caret">▾</span></a>
+<div class="dropdown" role="menu">
+<a href="../incentives.html"><span class="icon green">🏷️</span>
+<span><b>Federal &amp; state</b><small>Credits, rebates, and utility programs.</small></span>
+</a>
+<a href="../roi.html"><span class="icon">🧮</span>
+<span><b>return on investment calculator</b><small>Estimate size, price, and payback.</small></span>
+</a>
+<a href="../financing.html"><span class="icon">🏦</span>
+<span><b>Financing</b><small>Cash, loan, power purchase agreement, and what to compare.</small></span>
+</a>
+</div>
+</li>
+<li class="has-dropdown">
+<a href="../reports.html">Reports <span class="caret">▾</span></a>
+<div class="dropdown" role="menu">
+<a href="../reports.html#air"><span class="icon red">🌫️</span>
+<span><b>Air quality</b><small>fine particulate matter smaller than 2.5 micrometers and nitrogen dioxide snapshots across major cities.</small></span>
+</a>
+<a href="../reports.html#energy"><span class="icon">🏭</span>
+<span><b>Energy mix</b><small>Fossil generation trends (sample charts).</small></span>
+</a>
+<a href="../reports.html#methods"><span class="icon">🧪</span>
+<span><b>Methodology</b><small>Assumptions, limitations, and how to improve.</small></span>
+</a>
+</div>
+</li>
+<li><a href="../gallery.html">Gallery</a></li>
+<li><a href="../faq.html">frequently asked questions</a></li>
+<li><a href="sources/index.html"><span class="icon">📚</span><span><b>Sources</b><small>Data and references</small></span></a></li>
+
+</ul>
+<div class="nav-cta">
+<a class="pill help" href="../help-us.html">Help us continue to breathe</a>
+<a class="pill accent" href="mailto:patrick.proctor@yahoo.com?subject=Bloist.com%20-%20Solar%20for%20my%20home&amp;body=Hi%20Patrick%2C%0D%0A%0D%0AI%20want%20to%20learn%20more%20about%20going%20solar.%20Here%E2%80%99s%20my%20ZIP%20code%20and%20average%20monthly%20bill%3A%0D%0A%0D%0AZIP%3A%20%0D%0ABill%3A%20%0D%0A%0D%0AThank%20you!">Contact</a>
+</div>
+</nav>
+</div>
+</header>  <!-- NOTE: path fixes for nested sources pages -->
+<main id="content">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <div class="badge">SOURCES • AIR QUALITY</div>
+        <h1>Sources: Air quality</h1>
+        <p class="lede">Everything used for this section, with dates, so you can verify quickly.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn secondary" href="../reports.html">Back to Reports</a>
+          <a class="btn" href="../../index.html">Home</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <img alt="Document icon." src="../../assets/img/favicon.svg"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      
+<h2>World Health Organization Ambient Air Quality Database</h2>
+<p><b>What we used:</b> City-level annual mean concentrations for fine particle pollution smaller than 2.5 micrometers and nitrogen dioxide, taking the latest year available per city.</p>
+<ul>
+  <li><b>Dataset:</b> WHO Ambient Air Quality Database, version 6.1 (released 31 January 2024).</li>
+  <li><b>Download:</b> Excel file (V6.1) from the World Health Organization.</li>
+  <li><b>How we used it:</b> We selected a small set of major cities per region and plotted the latest value for each city.</li>
+  <li><b>Snapshot date in this repository:</b> 2026-01-04.</li>
+</ul>
+<p class="note">
+  Official page: https://www.who.int/data/gho/data/themes/air-pollution/who-air-quality-database<br/>
+  Download page: https://www.who.int/publications/m/item/who-ambient-air-quality-database-(update-jan-2024)
+</p>
+
+    </div>
+  </section>
+</main>
+</main>
+<footer class="footer">
+<div class="container footer-grid">
+<div>
+<div class="brand" style="gap:12px; margin-bottom:10px">
+<div aria-hidden="true" class="logo"></div>
+<span>bloist.com</span>
+</div>
+<p class="small">A technical, human-first pitch for residential solar.</p>
+<p class="small">Contact: <a class="btn secondary" href="mailto:patrick.proctor@yahoo.com">patrick.proctor@yahoo.com</a></p>
+<p class="note">© 2026 bloist.com • Content is educational and illustrative; verify incentives and utility rules for your location.</p>
+</div>
+<div class="muted-box">
+<b>Quick links</b>
+<hr class="sep"/>
+<div style="display:grid; gap:10px">
+<a class="btn secondary" href="../roi.html">return on investment calculator</a>
+<a class="btn secondary" href="../reports.html">Reports &amp; charts</a>
+<a class="btn secondary" href="../how-it-works.html">How it works</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>
