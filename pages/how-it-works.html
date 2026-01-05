@@ -1,228 +1,392 @@
-<!-- BLOIST-ANNOTATED-FILE: how-it-works.html
-  PURPOSE: Static page for www.bloist.com (no build step required).
-  NOTE: This file is intentionally plain HTML so it can be hosted anywhere.
--->
+<!-- BLOIST-ANNOTATED-FILE: how-it-works.html-->
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#061021" name="theme-color"/>
-<meta content="www.bloist.com — clean, technical, and compelling solar education for homeowners." name="description"/>
-<title>How it works • www.bloist.com</title>
-<link href="../assets/css/styles.css" rel="stylesheet"/>
-<link href="../assets/css/reveal.css" rel="stylesheet"/>
-<link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="#061021" name="theme-color"/>
+    <meta content="www.bloist.com — clean, technical, and compelling solar education for homeowners." name="description"/>
+    <title>How it works • www.bloist.com</title>
+    <link href="../assets/css/styles.css" rel="stylesheet"/>
+    <link href="../assets/css/reveal.css" rel="stylesheet"/>
+    <link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+
+    <style>
+        /* Quick self-check panel: light-touch, no framework */
+        .question-panel {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 18px;
+        }
+
+        .question {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: 12px;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .question:last-child { border-bottom: none; }
+
+        .question label {
+            cursor: default;
+            color: var(--text);
+            font-size: 0.95rem;
+            line-height: 1.35;
+        }
+
+        .q-choice {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: var(--muted);
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .score-box {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255,255,255,0.10);
+        }
+
+        .score {
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+        .hero-right {
+            display: grid;
+            gap: 18px;
+            align-content: start;
+        }
+    </style>
+
 </head>
 <body><div id="top"></div>
 <header>
-<a class="skip-link" href="#content">Skip to content</a>
-<div class="container navbar">
-<a aria-label="Bloist home" class="brand" href="../index.html">
-<div aria-hidden="true" class="logo"></div>
-<span>www.bloist.com</span>
-</a>
-<div class="nav-grow"></div>
-<button aria-controls="navLinks" aria-expanded="false" class="nav-toggle" id="navToggle">Menu ▾</button>
-<nav aria-label="Primary" class="nav-links" id="navLinks">
-<ul>
-<li class="has-dropdown">
-<a href="../pages/why-solar.html">Why Solar <span class="caret">▾</span></a>
-<div class="dropdown" role="menu">
-<a href="../pages/why-solar.html"><span class="icon green">☀️</span>
-<span><b>Cleaner air</b><small>Cut emissions by reducing fossil generation demand.</small></span>
-</a>
-<a href="../pages/roi.html"><span class="icon">📉</span>
-<span><b>Lower long-term cost</b><small>Model payback, savings, and uncertainty.</small></span>
-</a>
-<div class="has-dropdown">
-<a href="../pages/resilience.html"><span class="icon">🔋</span>
-<span><b>Resilience</b><small>Solar + storage keeps critical loads on.</small></span>
-</a>
-<div class="dropdown submenu">
-<a href="../pages/resilience.html#outages"><span class="icon green">⚡</span>
-<span><b>Outage playbooks</b><small>Refrigerator, medical devices, network, HVAC.</small></span>
-</a>
-<a href="../pages/resilience.html#storage"><span class="icon">🧠</span>
-<span><b>Battery sizing</b><small>kilowatt-hour, kilowatt, and inverter constraints explained.</small></span>
-</a>
-</div>
-</div>
-</div>
-</li>
-<li class="has-dropdown">
-<a href="../pages/how-it-works.html">Technology <span class="caret">▾</span></a>
-<div class="dropdown" role="menu">
-<div class="has-dropdown">
-<a href="../pages/how-it-works.html#pv"><span class="icon">🧩</span>
-<span><b>photovoltaic basics</b><small>Cells, modules, strings, and DC→AC.</small></span>
-</a>
-<div class="dropdown submenu">
-<a href="../pages/tech-panels.html"><span class="icon">🧱</span>
-<span><b>Panels</b><small>Efficiency, temperature coeff., degradation.</small></span>
-</a>
-<a href="../pages/tech-inverters.html"><span class="icon">🔌</span>
-<span><b>Inverters</b><small>String vs microinverters vs optimizers.</small></span>
-</a>
-<a href="../pages/tech-shading.html"><span class="icon">🌳</span>
-<span><b>Shading</b><small>Why a single shadow can matter—by topology.</small></span>
-</a>
-</div>
-</div>
-<a href="../pages/grid.html"><span class="icon green">🗺️</span>
-<span><b>Grid interaction</b><small>Net metering, time-of-use, interconnection, export limits.</small></span>
-</a>
-<a href="../pages/monitoring.html"><span class="icon">📡</span>
-<span><b>Monitoring</b><small>Telemetry, performance ratios, alerts.</small></span>
-</a>
-</div>
-</li>
-<li class="has-dropdown">
-<a href="../pages/incentives.html">Cost &amp; Incentives <span class="caret">▾</span></a>
-<div class="dropdown" role="menu">
-<a href="../pages/incentives.html"><span class="icon green">🏷️</span>
-<span><b>Federal &amp; state</b><small>Credits, rebates, and utility programs.</small></span>
-</a>
-<a href="../pages/roi.html"><span class="icon">🧮</span>
-<span><b>return on investment calculator</b><small>Estimate size, price, and payback.</small></span>
-</a>
-<a href="../pages/financing.html"><span class="icon">🏦</span>
-<span><b>Financing</b><small>Cash, loan, power purchase agreement, and what to compare.</small></span>
-</a>
-</div>
-</li>
-<li class="has-dropdown">
-<a href="../pages/reports.html">Reports <span class="caret">▾</span></a>
-<div class="dropdown" role="menu">
-<a href="../pages/reports.html#air"><span class="icon red">🌫️</span>
-<span><b>Air quality</b><small>fine particulate matter smaller than 2.5 micrometers and nitrogen dioxide snapshots across major cities.</small></span>
-</a>
-<a href="../pages/reports.html#energy"><span class="icon">🏭</span>
-<span><b>Energy mix</b><small>Fossil generation trends (sample charts).</small></span>
-</a></div>
-</li>
-<li><a href="../pages/gallery.html">Gallery</a></li>
-<li><a href="../pages/faq.html">frequently asked questions</a></li>
-<li><a href="sources/index.html"><span class="icon">📚</span><span><b>Sources</b><small>Data and references</small></span></a></li>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <div class="container navbar">
+        <a aria-label="Bloist home" class="brand" href="../index.html">
+            <div aria-hidden="true" class="logo"></div>
+            <span>www.bloist.com</span>
+        </a>
+        <div class="nav-grow"></div>
+        <button aria-controls="navLinks" aria-expanded="false" class="nav-toggle" id="navToggle">Menu ▾</button>
+        <nav aria-label="Primary" class="nav-links" id="navLinks">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="../pages/why-solar.html">Why Solar <span class="caret">▾</span></a>
+                    <div class="dropdown" role="menu">
+                        <a href="../pages/why-solar.html"><span class="icon green">☀️</span>
+                            <span><b>Cleaner air</b><small>Cut emissions by reducing fossil generation demand.</small></span>
+                        </a>
+                        <a href="../pages/roi.html"><span class="icon">📉</span>
+                            <span><b>Lower long-term cost</b><small>Model payback, savings, and uncertainty.</small></span>
+                        </a>
+                        <div class="has-dropdown">
+                            <a href="../pages/resilience.html"><span class="icon">🔋</span>
+                                <span><b>Resilience</b><small>Solar + storage keeps critical loads on.</small></span>
+                            </a>
+                            <div class="dropdown submenu">
+                                <a href="../pages/resilience.html#outages"><span class="icon green">⚡</span>
+                                    <span><b>Outage playbooks</b><small>Refrigerator, medical devices, network, HVAC.</small></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-dropdown">
+                    <a href="../pages/how-it-works.html">Technology <span class="caret">▾</span></a>
+                    <div class="dropdown" role="menu">
+                        <div class="has-dropdown">
+                            <a href="../pages/how-it-works.html#pv"><span class="icon">🧩</span>
+                                <span><b>photovoltaic basics</b><small>Cells, modules, strings, and DC→AC.</small></span>
+                            </a>
+                            <div class="dropdown submenu">
+                                <a href="../pages/tech-panels.html"><span class="icon">🧱</span>
+                                    <span><b>Panels</b><small>Efficiency, temperature coeff., degradation.</small></span>
+                                </a>
+                                <a href="../pages/tech-inverters.html"><span class="icon">🔌</span>
+                                    <span><b>Inverters</b><small>String vs microinverters vs optimizers.</small></span>
+                                </a>
+                                <a href="../pages/tech-shading.html"><span class="icon">🌳</span>
+                                    <span><b>Shading</b><small>Why a single shadow can matter—by topology.</small></span>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="../pages/grid.html"><span class="icon green">🗺️</span>
+                            <span><b>Grid interaction</b><small>Net metering, time-of-use, interconnection, export limits.</small></span>
+                        </a>
+                        <a href="../pages/monitoring.html"><span class="icon">📡</span>
+                            <span><b>Monitoring</b><small>Telemetry, performance ratios, alerts.</small></span>
+                        </a>
+                    </div>
+                </li>
+                <li class="has-dropdown">
+                    <a href="../pages/incentives.html">Cost &amp; Incentives <span class="caret">▾</span></a>
+                    <div class="dropdown" role="menu">
+                        <a href="../pages/incentives.html"><span class="icon green">🏷️</span>
+                            <span><b>Federal &amp; state</b><small>Credits, rebates, and utility programs.</small></span>
+                        </a>
+                        <a href="../pages/roi.html"><span class="icon">🧮</span>
+                            <span><b>return on investment calculator</b><small>Estimate size, price, and payback.</small></span>
+                        </a>
+                        <a href="../pages/financing.html"><span class="icon">🏦</span>
+                            <span><b>Financing</b><small>Cash, loan, power purchase agreement, and what to compare.</small></span>
+                        </a>
+                    </div>
+                </li>
+                <li class="has-dropdown">
+                    <a href="../pages/reports.html">Reports <span class="caret">▾</span></a>
+                    <div class="dropdown" role="menu">
+                        <a href="../pages/reports.html#air"><span class="icon red">🌫️</span>
+                            <span><b>Air quality</b><small>fine particulate matter smaller than 2.5 micrometers and nitrogen dioxide snapshots across major cities.</small></span>
+                        </a>
+                        <a href="../pages/reports.html#energy"><span class="icon">🏭</span>
+                            <span><b>Energy mix</b><small>Fossil generation trends (sample charts).</small></span>
+                        </a></div>
+                </li>
+                <li><a href="../pages/gallery.html">Gallery</a></li>
+                <li><a href="../pages/faq.html">frequently asked questions</a></li>
+                <li><a href="sources/index.html"><span class="icon">📚</span><span><b>Sources</b><small>Data and references</small></span></a></li>
 
-</ul>
-<div class="nav-cta">
-<a class="pill help" href="../pages/help-us.html">Help us continue to breathe</a>
-<a class="pill accent" href="mailto:patrick.proctor@yahoo.com?subject=www.bloist.com%20-%20Solar%20for%20my%20home&amp;body=Hi%20Patrick%2C%0D%0A%0D%0AI%20want%20to%20learn%20more%20about%20going%20solar.%20Here%E2%80%99s%20my%20ZIP%20code%20and%20average%20monthly%20bill%3A%0D%0A%0D%0AZIP%3A%20%0D%0ABill%3A%20%0D%0A%0D%0AThank%20you!">Contact</a>
-</div>
-</nav>
-</div>
+            </ul>
+            <div class="nav-cta">
+                <a class="pill help" href="../pages/help-us.html">Help us continue to breathe</a>
+                <a class="pill accent" href="mailto:patrick.proctor@yahoo.com?subject=www.bloist.com%20-%20Solar%20for%20my%20home&amp;body=Hi%20Patrick%2C%0D%0A%0D%0AI%20want%20to%20learn%20more%20about%20going%20solar.%20Here%E2%80%99s%20my%20ZIP%20code%20and%20average%20monthly%20bill%3A%0D%0A%0D%0AZIP%3A%20%0D%0ABill%3A%20%0D%0A%0D%0AThank%20you!">Contact</a>
+            </div>
+        </nav>
+    </div>
 </header>
-<main id="content">
-<section class="hero">
-<div class="container hero-grid">
-<div class="reveal">
-<div class="badge">TECHNOLOGY • photovoltaic • INVERTERS • PERFORMANCE RATIO</div>
-<h1>How solar works (the technical version)</h1>
-<p class="lede">A rooftop system is a power plant with a spec sheet. Understanding a few core terms lets you evaluate proposals, estimate production, and avoid common sizing mistakes.</p>
-<div style="display:flex; gap:12px; flex-wrap:wrap">
-<a class="btn green" href="tech-panels.html">Panels</a>
-<a class="btn" href="tech-inverters.html">Inverters</a>
-<a class="btn secondary" href="monitoring.html">Monitoring</a>
-</div>
-</div>
-<div class="card reveal">
-<img alt="Home solar illustration." src="../assets/img/home_solar.svg"/>
-<div class="card-body">
-<b>Photovoltaic panels are not magic</b>
-<p class="small" style="margin:8px 0 0; color:var(--muted)">It’s semiconductor physics + power electronics + grid standards.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="section" id="pv">
-<div class="container split">
-<div class="muted-box reveal">
-<h2 style="margin-top:0">photovoltaic basics</h2>
-<p><b>Photovoltaic cells</b> produce DC power when photons excite electrons in a semiconductor junction. Cells are wired into modules (panels), and modules are wired into strings.</p>
-<p><b>Inverters</b> convert DC to grid‑synchronous AC, perform maximum power point tracking (MPPT), and enforce safety standards (rapid shutdown, anti‑islanding).</p>
-<hr class="sep"/>
-<p class="note">Key formula: <b>Power (watts) = Voltage (V) × Current (A)</b>. Strings increase voltage; parallel strings increase current.</p>
-</div>
-<div class="callout reveal">
-<b>Common terms (quick reference)</b>
-<ul style="margin:10px 0 0; color:var(--text)">
-<li><b>kilowatt (power):</b> instant capacity</li>
-<li><b>kilowatt-hour (energy):</b> quantity over time</li>
-<li><b>STC:</b> lab rating at 1000 W/m², 25°C cell temp</li>
-<li><b>PR:</b> performance ratio (real output / ideal)</li>
-</ul>
-</div>
-</div>
 
-<div class="section-sources"><a class="btn btn-small" href="sources/how-it-works-sources.html#pv">Sources for this section</a></div>
-</section>
-<section class="section">
-<div class="container">
-<h2>What actually reduces output</h2>
-<div class="grid-3">
-<div class="feature reveal">
-<h3>Temperature</h3>
-<p>Panels lose power as cell temperature rises. Look at the temperature coefficient (e.g., −0.3%/°C).</p>
-</div>
-<div class="feature reveal">
-<h3>Shading</h3>
-<p>In string systems, a single shaded module can drag down the whole string unless mitigated by MLPE.</p>
-</div>
-<div class="feature reveal">
-<h3>Clipping</h3>
-<p>If DC capacity exceeds inverter AC rating, peaks clip. That can be fine—often improves annual return on investment.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="section">
-<div class="container split">
-<div class="muted-box reveal">
-<h2 style="margin-top:0">Design checklist</h2>
-<ol style="color:var(--muted); margin-top:10px">
-<li><b>Roof geometry:</b> usable planes, setbacks, obstructions.</li>
-<li><b>Azimuth/tilt:</b> south‑ish is great; west can help with late‑day time-of-use rates.</li>
-<li><b>Shading profile:</b> trees/chimneys; morning vs afternoon matters.</li>
-<li><b>Electrical constraints:</b> main panel, busbar limits, interconnection rules.</li>
-<li><b>Export limits:</b> some utilities cap backfeed; storage can help.</li>
-</ol>
-</div>
-<div class="callout reveal">
-<b>Go deeper</b>
-<p style="margin:0">We split topics into focused deep dives so you can skim or nerd out:</p>
-<div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
-<a class="btn secondary" href="tech-shading.html">Shading physics</a>
-<a class="btn secondary" href="grid.html">Grid rules</a>
-<a class="btn secondary" href="financing.html">Financing comparisons</a>
-</div>
-</div>
-</div>
-</section>
+<main id="content">
+    <section class="hero">
+        <div class="container hero-grid">
+
+            <!-- LEFT COLUMN: YES-WEIGHTED QUESTIONS (guided by page content) -->
+            <div class="question-panel reveal">
+                <div class="badge">QUICK SELF-CHECK</div>
+                <h2 style="margin-top:10px">Would a technical overview help?</h2>
+
+                <div class="question">
+                    <label>Would you like to understand the basic building blocks (cells → modules → strings) before comparing proposals?</label>
+                    <div class="q-choice"><input type="radio" name="q1" value="yes"> Yes</div>
+                    <div class="q-choice"><input type="radio" name="q1" value="no"> Not yet</div>
+                </div>
+
+                <div class="question">
+                    <label>Would it be helpful to clearly separate power (kW) from energy (kWh) so estimates make sense?</label>
+                    <div class="q-choice"><input type="radio" name="q2" value="yes"> Yes</div>
+                    <div class="q-choice"><input type="radio" name="q2" value="no"> Not yet</div>
+                </div>
+
+                <div class="question">
+                    <label>Would you prefer knowing how inverters (DC→AC + MPPT) affect real-world production?</label>
+                    <div class="q-choice"><input type="radio" name="q3" value="yes"> Yes</div>
+                    <div class="q-choice"><input type="radio" name="q3" value="no"> Not yet</div>
+                </div>
+
+                <div class="question">
+                    <label>Would you like to understand why STC ratings can differ from your roof’s real output?</label>
+                    <div class="q-choice"><input type="radio" name="q4" value="yes"> Yes</div>
+                    <div class="q-choice"><input type="radio" name="q4" value="no"> Not yet</div>
+                </div>
+
+                <div class="question">
+                    <label>Would it help to know the three common causes of lower output: temperature, shading, and clipping?</label>
+                    <div class="q-choice"><input type="radio" name="q5" value="yes"> Yes</div>
+                    <div class="q-choice"><input type="radio" name="q5" value="no"> Not yet</div>
+                </div>
+
+                <div class="question">
+                    <label>Would you like a simple way to interpret performance ratio (PR) so “expected production” feels accountable?</label>
+                    <div class="q-choice"><input type="radio" name="q6" value="yes"> Yes</div>
+                    <div class="q-choice"><input type="radio" name="q6" value="no"> Not yet</div>
+                </div>
+
+                <div class="question">
+                    <label>Would it be useful to check roof geometry, tilt/azimuth, shading, and electrical limits before locking in a system size?</label>
+                    <div class="q-choice"><input type="radio" name="q7" value="yes"> Yes</div>
+                    <div class="q-choice"><input type="radio" name="q7" value="no"> Not yet</div>
+                </div>
+
+                <div class="question">
+                    <label>Would you want to understand export limits and interconnection rules so there are no surprises after install?</label>
+                    <div class="q-choice"><input type="radio" name="q8" value="yes"> Yes</div>
+                    <div class="q-choice"><input type="radio" name="q8" value="no"> Not yet</div>
+                </div>
+
+                <div class="score-box">
+                    <div class="score">Total: <span id="score">0%</span></div>
+                    <p class="small" style="margin:6px 0 10px; color:var(--muted)">
+                        Based on your answers above.
+                    </p>
+                    <a id="emailLink" class="btn green" href="mailto:patrick.proctor@yahoo.com?subject=www.bloist.com%20-%20How%20it%20works%20-%20Next%20steps&amp;body=Hi%20Patrick%2C%0D%0A%0D%0AI%20took%20the%20How%20it%20works%20quick%20checklist%20and%20would%20like%20to%20learn%20more%20about%20how%20to%20improve%20our%20situation.%0D%0A%0D%0AThanks!">
+                        Talk about improving our situation
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: ORIGINAL HERO CONTENT (kept intact) -->
+            <div class="hero-right">
+                <div class="reveal">
+                    <div class="badge">TECHNOLOGY • photovoltaic • INVERTERS • PERFORMANCE RATIO</div>
+                    <h1>How solar works (the technical version)</h1>
+                    <p class="lede">A rooftop system is a power plant with a spec sheet. Understanding a few core terms lets you evaluate proposals, estimate production, and avoid common sizing mistakes.</p>
+                    <div style="display:flex; gap:12px; flex-wrap:wrap">
+                        <a class="btn green" href="tech-panels.html">Panels</a>
+                        <a class="btn" href="tech-inverters.html">Inverters</a>
+                        <a class="btn secondary" href="monitoring.html">Monitoring</a>
+                    </div>
+                </div>
+
+                <div class="card reveal">
+                    <img alt="Home solar illustration." src="../assets/img/home_solar.svg"/>
+                    <div class="card-body">
+                        <b>Photovoltaic panels are not magic</b>
+                        <p class="small" style="margin:8px 0 0; color:var(--muted)">It’s semiconductor physics + power electronics + grid standards.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="pv">
+        <div class="container split">
+            <div class="muted-box reveal">
+                <h2 style="margin-top:0">photovoltaic basics</h2>
+                <p><b>Photovoltaic cells</b> produce DC power when photons excite electrons in a semiconductor junction. Cells are wired into modules (panels), and modules are wired into strings.</p>
+                <p><b>Inverters</b> convert DC to grid-synchronous AC, perform maximum power point tracking (MPPT), and enforce safety standards (rapid shutdown, anti-islanding).</p>
+                <hr class="sep"/>
+                <p class="note">Key formula: <b>Power (watts) = Voltage (V) × Current (A)</b>. Strings increase voltage; parallel strings increase current.</p>
+            </div>
+            <div class="callout reveal">
+                <b>Common terms (quick reference)</b>
+                <ul style="margin:10px 0 0; color:var(--text)">
+                    <li><b>kilowatt (power):</b> instant capacity</li>
+                    <li><b>kilowatt-hour (energy):</b> quantity over time</li>
+                    <li><b>STC:</b> lab rating at 1000 W/m², 25°C cell temp</li>
+                    <li><b>PR:</b> performance ratio (real output / ideal)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-sources"><a class="btn btn-small" href="sources/how-it-works-sources.html#pv">Sources for this section</a></div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>What actually reduces output</h2>
+            <div class="grid-3">
+                <div class="feature reveal">
+                    <h3>Temperature</h3>
+                    <p>Panels lose power as cell temperature rises. Look at the temperature coefficient (e.g., −0.3%/°C).</p>
+                </div>
+                <div class="feature reveal">
+                    <h3>Shading</h3>
+                    <p>In string systems, a single shaded module can drag down the whole string unless mitigated by MLPE.</p>
+                </div>
+                <div class="feature reveal">
+                    <h3>Clipping</h3>
+                    <p>If DC capacity exceeds inverter AC rating, peaks clip. That can be fine—often improves annual return on investment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container split">
+            <div class="muted-box reveal">
+                <h2 style="margin-top:0">Design checklist</h2>
+                <ol style="color:var(--muted); margin-top:10px">
+                    <li><b>Roof geometry:</b> usable planes, setbacks, obstructions.</li>
+                    <li><b>Azimuth/tilt:</b> south-ish is great; west can help with late-day time-of-use rates.</li>
+                    <li><b>Shading profile:</b> trees/chimneys; morning vs afternoon matters.</li>
+                    <li><b>Electrical constraints:</b> main panel, busbar limits, interconnection rules.</li>
+                    <li><b>Export limits:</b> some utilities cap backfeed; storage can help.</li>
+                </ol>
+            </div>
+            <div class="callout reveal">
+                <b>Go deeper</b>
+                <p style="margin:0">We split topics into focused deep dives so you can skim or nerd out:</p>
+                <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+                    <a class="btn secondary" href="tech-shading.html">Shading physics</a>
+                    <a class="btn secondary" href="grid.html">Grid rules</a>
+                    <a class="btn secondary" href="financing.html">Financing comparisons</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
+
 <footer class="footer">
-<div class="container footer-grid">
-<div>
-<div class="brand" style="gap:12px; margin-bottom:10px">
-<div aria-hidden="true" class="logo"></div>
-<span>www.bloist.com</span>
-</div>
-<p class="small">A technical, human-first pitch for residential solar.</p>
-<p class="small">Contact: <a class="btn secondary" href="mailto:patrick.proctor@yahoo.com">patrick.proctor@yahoo.com</a></p>
-<p class="note">© 2026 www.bloist.com • Content is educational and illustrative; verify incentives and utility rules for your location.</p>
-</div>
-<div class="muted-box">
-<b>Quick links</b>
-<hr class="sep"/>
-<div style="display:grid; gap:10px">
-<a class="btn secondary" href="../pages/roi.html">return on investment calculator</a>
-<a class="btn secondary" href="../pages/reports.html">Reports &amp; charts</a>
-<a class="btn secondary" href="../pages/how-it-works.html">How it works</a>
-</div>
-</div>
-</div>
+    <div class="container footer-grid">
+        <div>
+            <div class="brand" style="gap:12px; margin-bottom:10px">
+                <div aria-hidden="true" class="logo"></div>
+                <span>www.bloist.com</span>
+            </div>
+            <p class="small">A technical, human-first pitch for residential solar.</p>
+            <p class="small">Contact: <a class="btn secondary" href="mailto:patrick.proctor@yahoo.com">patrick.proctor@yahoo.com</a></p>
+            <p class="note">© 2026 www.bloist.com • Content is educational and illustrative; verify incentives and utility rules for your location.</p>
+        </div>
+        <div class="muted-box">
+            <b>Quick links</b>
+            <hr class="sep"/>
+            <div style="display:grid; gap:10px">
+                <a class="btn secondary" href="../pages/roi.html">return on investment calculator</a>
+                <a class="btn secondary" href="../pages/reports.html">Reports &amp; charts</a>
+                <a class="btn secondary" href="../pages/how-it-works.html">How it works</a>
+            </div>
+        </div>
+    </div>
 </footer>
+
 <script src="../assets/js/main.js"></script>
+
+<script>
+    (function () {
+        const totalQuestions = 8;
+        const scoreEl = document.getElementById("score");
+        const emailLink = document.getElementById("emailLink");
+
+        function updateScore() {
+            let yesCount = 0;
+            for (let i = 1; i <= totalQuestions; i++) {
+                const yes = document.querySelector(`input[name="q${i}"][value="yes"]:checked`);
+                if (yes) yesCount++;
+            }
+            const percent = Math.round((yesCount / totalQuestions) * 100);
+            scoreEl.textContent = percent + "%";
+
+            const body = encodeURIComponent(
+                "\nHi Patrick,\n\n" +
+                `I got ${percent}% on that quick checklist and I would like to learn more about how to improve our situation.\n\n` +
+                "Thanks!"
+            );
+
+            emailLink.href =
+                "mailto:patrick.proctor@yahoo.com" +
+                "?subject=" + encodeURIComponent("www.bloist.com - How it works - Next steps") +
+                "&body=" + body;
+        }
+
+        document.querySelectorAll('input[type="radio"]').forEach((input) => {
+            input.addEventListener("change", updateScore);
+        });
+
+        // Initialize once so the mailto is valid even before answers.
+        updateScore();
+    })();
+</script>
+
 </body>
 </html>

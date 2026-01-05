@@ -14,6 +14,61 @@
 <link href="../assets/css/styles.css" rel="stylesheet"/>
 <link href="../assets/css/reveal.css" rel="stylesheet"/>
 <link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+
+<style>
+/* Quick self-check panel: light-touch, no framework */
+.question-panel {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.question {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.question:last-child { border-bottom: none; }
+
+.question label {
+  cursor: default;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.q-choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.score-box {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+.score {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.hero-right {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+</style>
 </head>
 <body><div id="top"></div>
 <header>
@@ -117,6 +172,73 @@
 <main id="content">
 <section class="hero">
 <div class="container hero-grid">
+
+  <!-- LEFT COLUMN: YES-WEIGHTED QUESTIONS -->
+  <div class="question-panel reveal">
+    <div class="badge">QUICK SELF-CHECK</div>
+    <h2 style="margin-top:10px">Would a quick estimate help?</h2>
+
+    <div class="question">
+      <label>Would it be helpful to understand why small shadows can cause larger output losses?</label>
+      <div class="q-choice"><input type="radio" name="q1" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q1" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would you like to know how string topology changes the impact of shading?</label>
+      <div class="q-choice"><input type="radio" name="q2" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q2" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would it help to distinguish morning shading from afternoon shading for production estimates?</label>
+      <div class="q-choice"><input type="radio" name="q3" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q3" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would you prefer to learn the main shading mitigation options (layout, MLPE, trimming)?</label>
+      <div class="q-choice"><input type="radio" name="q4" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q4" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would it be useful to understand bypass diodes at a practical level?</label>
+      <div class="q-choice"><input type="radio" name="q5" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q5" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would you like to know what shading data matters most when comparing proposals?</label>
+      <div class="q-choice"><input type="radio" name="q6" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q6" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would it help to spot designs that underestimate shading-related losses?</label>
+      <div class="q-choice"><input type="radio" name="q7" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q7" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would you want a clear way to evaluate shading risk on your own roof?</label>
+      <div class="q-choice"><input type="radio" name="q8" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q8" value="no"> Not yet</div>
+    </div>
+
+    <div class="score-box">
+      <div class="score">Total: <span id="score">0%</span></div>
+      <p class="small" style="margin:6px 0 10px; color:var(--muted)">
+        Based on your answers above.
+      </p>
+      <a id="emailLink" class="btn green" href="mailto:patrick.proctor@yahoo.com?subject=www.bloist.com%20-%20Shading%20•%20www.bloist.com%20-%20Next%20steps&amp;body=Hi%20Patrick%2C%0D%0A%0D%0AI%20took%20the%20quick%20checklist%20and%20would%20like%20to%20learn%20more%20about%20how%20to%20improve%20our%20situation.%0D%0A%0D%0AThanks!">
+        Talk about improving our situation
+      </a>
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN: ORIGINAL HERO CONTENT (kept intact) -->
+  <div class="hero-right">
 <div class="reveal">
 <div class="badge">SHADING • IV CURVES • STRING EFFECTS</div>
 <h1>Shading: why one shadow can matter</h1>
@@ -129,6 +251,7 @@
 <p class="small" style="margin:8px 0 0; color:var(--muted)">It changes how current flows through a string and triggers bypass diodes.</p>
 </div>
 </div>
+  </div>
 </div>
 </section>
 <section class="section">
@@ -184,5 +307,42 @@
 </div>
 </footer>
 <script src="../assets/js/main.js"></script>
+
+<script>
+(function () {
+  const totalQuestions = 8;
+  const scoreEl = document.getElementById("score");
+  const emailLink = document.getElementById("emailLink");
+
+  function updateScore() {
+    let yesCount = 0;
+    for (let i = 1; i <= totalQuestions; i++) {
+      const yes = document.querySelector(`input[name="q${i}"][value="yes"]:checked`);
+      if (yes) yesCount++;
+    }
+    const percent = Math.round((yesCount / totalQuestions) * 100);
+    if (scoreEl) scoreEl.textContent = percent + "%";
+
+    const body = encodeURIComponent(
+      "\nHi Patrick,\n\n" +
+      `I got ${percent}% on that quick checklist and I would like to learn more about how to improve our situation.\n\n` +
+      "Thanks!"
+    );
+
+    if (emailLink) {
+      emailLink.href =
+        "mailto:patrick.proctor@yahoo.com" +
+        "?subject=" + encodeURIComponent("www.bloist.com - Shading • www.bloist.com - Next steps") +
+        "&body=" + body;
+    }
+  }
+
+  document.querySelectorAll('input[type="radio"]').forEach((input) => {
+    input.addEventListener("change", updateScore);
+  });
+
+  updateScore();
+})();
+</script>
 </body>
 </html>

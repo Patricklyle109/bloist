@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b22701d7-f4b6-4cd9-80c9-4b637f42fd4f" name="Changes" comment="drop github">
+    <list default="true" id="b22701d7-f4b6-4cd9-80c9-4b637f42fd4f" name="Changes" comment="Dropped ALL Github">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/reports-air-quality.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/reports-air-quality.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sources/reports-energy.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sources/reports-energy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/financing.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/financing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/grid.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/grid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/how-it-works.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/how-it-works.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/resilience.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/resilience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/roi.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/roi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/tech-inverters.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tech-inverters.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/tech-panels.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tech-panels.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/tech-shading.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tech-shading.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/why-solar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/why-solar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +38,9 @@
     &quot;accountId&quot;: &quot;b51ea2ae-9833-4c99-b53f-1fa0667c180d&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -38,11 +51,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
     "nodejs_package_manager_path": "npm",
@@ -66,7 +81,7 @@
       <updated>1767521681501</updated>
       <workItem from="1767521682798" duration="8543000" />
       <workItem from="1767541578507" duration="180000" />
-      <workItem from="1767541776708" duration="7828000" />
+      <workItem from="1767541776708" duration="10352000" />
     </task>
     <task id="LOCAL-00001" summary="First Push">
       <option name="closed" value="true" />
@@ -116,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767562908014</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Dropped ALL Github">
+      <option name="closed" value="true" />
+      <created>1767599067223</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1767599067223</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +190,7 @@
     <MESSAGE value="Change to www.bloist.com" />
     <MESSAGE value="drop github on index" />
     <MESSAGE value="drop github" />
-    <option name="LAST_COMMIT_MESSAGE" value="drop github" />
+    <MESSAGE value="Dropped ALL Github" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dropped ALL Github" />
   </component>
 </project>

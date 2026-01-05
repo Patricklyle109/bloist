@@ -14,6 +14,61 @@
 <link href="../assets/css/styles.css" rel="stylesheet"/>
 <link href="../assets/css/reveal.css" rel="stylesheet"/>
 <link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+
+<style>
+/* Quick self-check panel: light-touch, no framework */
+.question-panel {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.question {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.question:last-child { border-bottom: none; }
+
+.question label {
+  cursor: default;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.q-choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.score-box {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+.score {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.hero-right {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+</style>
 </head>
 <body><div id="top"></div>
 <header>
@@ -117,6 +172,73 @@
 <main id="content">
 <section class="hero">
 <div class="container hero-grid">
+
+  <!-- LEFT COLUMN: YES-WEIGHTED QUESTIONS -->
+  <div class="question-panel reveal">
+    <div class="badge">QUICK SELF-CHECK</div>
+    <h2 style="margin-top:10px">Would a quick estimate help?</h2>
+
+    <div class="question">
+      <label>Would it help to see real-world examples of clean, modern solar installs?</label>
+      <div class="q-choice"><input type="radio" name="q1" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q1" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would you like inspiration for layouts that look intentional on a roofline?</label>
+      <div class="q-choice"><input type="radio" name="q2" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q2" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would you prefer to understand aesthetics and equipment placement before committing?</label>
+      <div class="q-choice"><input type="radio" name="q3" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q3" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would it be useful to see how different panel orientations can still look tidy?</label>
+      <div class="q-choice"><input type="radio" name="q4" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q4" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would you like to compare different equipment styles without marketing fluff?</label>
+      <div class="q-choice"><input type="radio" name="q5" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q5" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would you find it helpful to know what questions to ask when reviewing an install design?</label>
+      <div class="q-choice"><input type="radio" name="q6" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q6" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would you prefer a quick visual reference before talking to an installer?</label>
+      <div class="q-choice"><input type="radio" name="q7" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q7" value="no"> Not yet</div>
+    </div>
+
+    <div class="question">
+      <label>Would you like to learn more about the options that fit your home best?</label>
+      <div class="q-choice"><input type="radio" name="q8" value="yes"> Yes</div>
+      <div class="q-choice"><input type="radio" name="q8" value="no"> Not yet</div>
+    </div>
+
+    <div class="score-box">
+      <div class="score">Total: <span id="score">0%</span></div>
+      <p class="small" style="margin:6px 0 10px; color:var(--muted)">
+        Based on your answers above.
+      </p>
+      <a id="emailLink" class="btn green" href="mailto:patrick.proctor@yahoo.com?subject=www.bloist.com%20-%20Gallery%20•%20www.bloist.com%20-%20Next%20steps&amp;body=Hi%20Patrick%2C%0D%0A%0D%0AI%20took%20the%20quick%20checklist%20and%20would%20like%20to%20learn%20more%20about%20how%20to%20improve%20our%20situation.%0D%0A%0D%0AThanks!">
+        Talk about improving our situation
+      </a>
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN: ORIGINAL HERO CONTENT (kept intact) -->
+  <div class="hero-right">
 <div class="reveal">
 <div class="badge">GALLERY • CLEAN HOMES • POLLUTION CONTEXT</div>
 <h1>Gallery</h1>
@@ -125,6 +247,7 @@
 <div class="card reveal">
 <img alt="Clean home with solar panels." src="../assets/img/home_solar.svg"/>
 </div>
+  </div>
 </div>
 </section>
 <section class="section">
@@ -175,5 +298,42 @@
 </div>
 </footer>
 <script src="../assets/js/main.js"></script>
+
+<script>
+(function () {
+  const totalQuestions = 8;
+  const scoreEl = document.getElementById("score");
+  const emailLink = document.getElementById("emailLink");
+
+  function updateScore() {
+    let yesCount = 0;
+    for (let i = 1; i <= totalQuestions; i++) {
+      const yes = document.querySelector(`input[name="q${i}"][value="yes"]:checked`);
+      if (yes) yesCount++;
+    }
+    const percent = Math.round((yesCount / totalQuestions) * 100);
+    if (scoreEl) scoreEl.textContent = percent + "%";
+
+    const body = encodeURIComponent(
+      "\nHi Patrick,\n\n" +
+      `I got ${percent}% on that quick checklist and I would like to learn more about how to improve our situation.\n\n` +
+      "Thanks!"
+    );
+
+    if (emailLink) {
+      emailLink.href =
+        "mailto:patrick.proctor@yahoo.com" +
+        "?subject=" + encodeURIComponent("www.bloist.com - Gallery • www.bloist.com - Next steps") +
+        "&body=" + body;
+    }
+  }
+
+  document.querySelectorAll('input[type="radio"]').forEach((input) => {
+    input.addEventListener("change", updateScore);
+  });
+
+  updateScore();
+})();
+</script>
 </body>
 </html>

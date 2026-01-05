@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="401001c4-f259-4265-a33b-921238d7bde8" name="bloist" url="http://104.218.51.35">
+        <fileTransfer rootFolder="/domains/bloist.com/public_html" host="104.218.51.35" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
